@@ -1,10 +1,24 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090909">
-  <meta name="description" content="Dani Música Local. Un reproductor de música para Android.">
-  <title>Dani — Música Local</title>  <style>
+  <meta name="theme-color" content="#09090d">
+  <meta name="description" content="Dani Music: tu música, tus listas y tu experiencia de reproducción en un solo lugar.">
+  <title>Dani Music — Tu música, a tu manera</title>
+
+  <style>
+    :root {
+      --bg: #09090d;
+      --surface: #111117;
+      --surface-2: #171720;
+      --text: #f5f5f7;
+      --muted: #9999a8;
+      --accent: #a78bfa;
+      --accent-2: #7c5ce7;
+      --border: rgba(255,255,255,.09);
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -16,41 +30,60 @@
     }
 
     body {
-      background: #090909;
-      color: #f5f5f5;
-      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, sans-serif;
       line-height: 1.6;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     .container {
-      width: 90%;
-      max-width: 1100px;
+      width: min(1100px, 90%);
       margin: auto;
     }
 
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(9,9,13,.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
     nav {
-      height: 75px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid #222;
+      gap: 20px;
     }
 
     .brand {
-      font-size: 21px;
-      font-weight: 700;
-      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 19px;
+      font-weight: 750;
+      letter-spacing: -.5px;
+    }
+
+    .brand img {
+      width: 39px;
+      height: 39px;
+      object-fit: contain;
+      border-radius: 12px;
     }
 
     .nav-links {
       display: flex;
-      gap: 28px;
-      color: #aaa;
+      align-items: center;
+      gap: 25px;
+      color: var(--muted);
       font-size: 14px;
     }
 
@@ -59,316 +92,415 @@
     }
 
     .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
       text-align: center;
-      padding: 100px 20px 90px;
+      padding: 90px 0;
+      background:
+        radial-gradient(ellipse at 50% 15%, rgba(124,92,231,.19), transparent 55%);
     }
 
-    .hero img {
-      width: 135px;
-      height: 135px;
-      object-fit: contain;
-      border-radius: 28px;
-      margin-bottom: 30px;
-    }
-
-    .hero h1 {
-      font-size: clamp(36px, 7vw, 58px);
-      line-height: 1.15;
-      letter-spacing: -2px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      color: #999;
-      font-size: 17px;
-      max-width: 560px;
+    .hero-content {
+      max-width: 760px;
       margin: auto;
     }
 
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid rgba(167,139,250,.25);
+      border-radius: 100px;
+      color: #c4b5fd;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(43px, 8vw, 76px);
+      line-height: 1.06;
+      letter-spacing: -4px;
+      font-weight: 800;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      max-width: 590px;
+      margin: 25px auto 32px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
     .actions {
-      margin-top: 35px;
       display: flex;
       justify-content: center;
-      gap: 14px;
       flex-wrap: wrap;
+      gap: 13px;
     }
 
     .button {
-      padding: 13px 25px;
-      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 49px;
+      padding: 0 23px;
+      border-radius: 12px;
       font-size: 14px;
       font-weight: 700;
-      transition: .2s;
+      transition: .2s ease;
     }
 
-    .primary {
-      background: #f5f5f5;
-      color: #090909;
+    .button-primary {
+      color: #09090d;
+      background: var(--accent);
     }
 
-    .primary:hover {
-      background: #ccc;
+    .button-primary:hover {
+      background: #c4b5fd;
+      transform: translateY(-2px);
     }
 
-    .secondary {
-      border: 1px solid #444;
-      color: #eee;
+    .button-secondary {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
     }
 
-    .secondary:hover {
-      background: #1c1c1c;
-    }
-
-    .version {
-      color: #666;
-      font-size: 12px;
-      margin-top: 20px;
+    .button-secondary:hover {
+      background: rgba(255,255,255,.09);
     }
 
     .section {
-      padding: 75px 0;
-      border-top: 1px solid #222;
+      padding: 85px 0;
     }
 
-    .section-title {
-      font-size: 29px;
-      margin-bottom: 14px;
-      letter-spacing: -.5px;
-    }
-
-    .section-description {
-      color: #999;
+    .section-heading {
+      text-align: center;
       max-width: 620px;
-      margin-bottom: 35px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(28px, 5vw, 40px);
+      letter-spacing: -1.5px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin-top: 12px;
     }
 
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
     }
 
     .feature {
-      padding: 25px;
-      background: #111;
-      border: 1px solid #252525;
-      border-radius: 12px;
+      padding: 27px;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: var(--surface);
+    }
+
+    .feature-number {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
 
     .feature h3 {
-      font-size: 17px;
-      margin-bottom: 9px;
+      margin: 13px 0 8px;
+      font-size: 18px;
     }
 
     .feature p {
-      color: #929292;
+      color: var(--muted);
       font-size: 14px;
     }
 
     .screenshots {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-top: 35px;
+      gap: 20px;
+      align-items: start;
     }
 
     .screenshot {
-      text-align: center;
+      overflow: hidden;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--surface);
     }
 
     .screenshot img {
-      width: 100%;
-      max-width: 280px;
       display: block;
-      margin: auto;
-      border-radius: 12px;
-      border: 1px solid #333;
-      background: #151515;
+      width: 100%;
+      height: auto;
+      border-radius: 11px;
     }
 
-    .screenshot h3 {
-      margin-top: 15px;
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .download-box {
+    .screenshot p {
+      padding: 13px 5px 5px;
       text-align: center;
-      background: #111;
-      border: 1px solid #292929;
-      border-radius: 16px;
-      padding: 50px 20px;
-    }
-
-    .download-box h2 {
-      font-size: 29px;
-      margin-bottom: 12px;
-    }
-
-    .download-box p {
-      color: #999;
-      margin-bottom: 25px;
-    }
-
-    .footer {
-      padding: 35px 0;
-      border-top: 1px solid #222;
-      color: #777;
+      color: var(--muted);
       font-size: 13px;
+    }
+
+    .download {
+      padding: 65px 25px;
+      border: 1px solid rgba(167,139,250,.2);
+      border-radius: 24px;
       text-align: center;
+      background:
+        radial-gradient(ellipse at center, rgba(124,92,231,.16), transparent 70%),
+        var(--surface);
     }
 
-    .footer a {
-      color: #bbb;
+    .download h2 {
+      font-size: clamp(29px, 5vw, 42px);
+      letter-spacing: -1.5px;
     }
 
-    @media (max-width: 650px) {
+    .download p {
+      max-width: 540px;
+      margin: 15px auto 25px;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 80px;
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    @media (max-width: 750px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .screenshots {
+        grid-template-columns: 1fr;
+        max-width: 390px;
+        margin: auto;
+      }
+
+      .hero {
+        min-height: 540px;
+      }
+
       .nav-links {
         gap: 13px;
         font-size: 12px;
       }
 
-      .hero {
-        padding: 75px 10px;
-      }
-
-      .screenshots {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .screenshot img {
-        max-width: 300px;
-      }
-
-      .section {
-        padding: 55px 0;
+      h1 {
+        letter-spacing: -2px;
       }
     }
-  </style></head><body>  <nav class="container">
-    <a class="brand" href="#">DANI</a><div class="nav-links">
-  <a href="#about">Proyecto</a>
-  <a href="#screenshots">Capturas</a>
-  <a href="#download">Descargar</a>
-</div>
 
-  </nav>  <header class="hero">
-    <img src="logo-dani.png" alt="Dani Música Local"><h1>Tu música.<br>Tu espacio.</h1>
+    @media (max-width: 420px) {
+      .nav-links a:first-child {
+        display: none;
+      }
 
-<p>
-  Una experiencia sencilla para disfrutar
-  de tu música local en Android.
-</p>
+      .brand {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
 
-<div class="actions">
-  <a class="button primary"
-     href="https://github.com/GabryYR/Dani-Musica-Local/releases/latest">
-    Descargar aplicación
-  </a>
+<body>
 
-  <a class="button secondary"
-     href="https://github.com/GabryYR/Dani-Musica-Local">
-    Ver proyecto
-  </a>
-</div>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#">
+          <img src="logo-dani.png" alt="Logo Dani Music">
+          <span>Dani Music</span>
+        </a>
 
-<div class="version">Versión 1.0.0 · Android</div>
-
-  </header>  <main><section class="section" id="about">
-  <div class="container">
-    <h2 class="section-title">Acerca de Dani</h2>
-
-    <p class="section-description">
-      Dani – Música Local es un proyecto Android
-      enfocado en reproducir música almacenada
-      directamente en el dispositivo.
-    </p>
-
-    <div class="features">
-      <article class="feature">
-        <h3>Reproducción local</h3>
-        <p>
-          Disfruta de la música almacenada
-          en tu dispositivo.
-        </p>
-      </article>
-
-      <article class="feature">
-        <h3>Experiencia sencilla</h3>
-        <p>
-          Una propuesta enfocada en ofrecer
-          una experiencia cómoda.
-        </p>
-      </article>
-
-      <article class="feature">
-        <h3>Para Android</h3>
-        <p>
-          Aplicación distribuida mediante
-          un paquete APK.
-        </p>
-      </article>
+        <div class="nav-links">
+          <a href="#funciones">Funciones</a>
+          <a href="#capturas">Capturas</a>
+          <a href="#descargar">Descargar</a>
+        </div>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section" id="screenshots">
-  <div class="container">
-    <h2 class="section-title">Capturas de pantalla</h2>
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="eyebrow">Tu experiencia musical</span>
 
-    <p class="section-description">
-      Conoce la interfaz de Dani.
-    </p>
+        <h1>Tu música.<br><span>Tu manera.</span></h1>
 
-    <div class="screenshots">
+        <p>
+          Descubre una experiencia de reproducción diseñada para
+          disfrutar tu música con una interfaz moderna y herramientas
+          que se adaptan a ti.
+        </p>
 
-      <article class="screenshot">
-        <img src="reproductor.png" alt="Reproductor de Dani">
-        <h3>Reproductor</h3>
-      </article>
+        <div class="actions">
+          <a class="button button-primary"
+             href="https://github.com/GabryYR/Dani-Musica-Local/releases/latest">
+            Descargar Dani Music
+          </a>
 
-      <article class="screenshot">
-        <img src="ajustes.png" alt="Ajustes de Dani">
-        <h3>Ajustes</h3>
-      </article>
+          <a class="button button-secondary"
+             href="https://github.com/GabryYR/Dani-Musica-Local">
+            Ver proyecto
+          </a>
+        </div>
+      </div>
+    </section>
 
-      <article class="screenshot">
-        <img src="listas.png" alt="Listas de Dani">
-        <h3>Listas</h3>
-      </article>
+    <section class="section" id="funciones">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Una experiencia completa</h2>
+          <p>
+            Herramientas pensadas para que tengas el control
+            de tu experiencia musical.
+          </p>
+        </div>
 
-    </div>
-  </div>
-</section>
+        <div class="features">
+          <article class="feature">
+            <span class="feature-number">01 / REPRODUCTOR</span>
+            <h3>Tu música en un solo lugar</h3>
+            <p>
+              Disfruta de tu biblioteca musical con una experiencia
+              de reproducción sencilla.
+            </p>
+          </article>
 
-<section class="section" id="download">
-  <div class="container">
-    <div class="download-box">
-      <h2>Descubre Dani</h2>
+          <article class="feature">
+            <span class="feature-number">02 / PERSONALIZACIÓN</span>
+            <h3>Una interfaz a tu estilo</h3>
+            <p>
+              Explora las opciones de apariencia y personalización
+              disponibles en la aplicación.
+            </p>
+          </article>
 
-      <p>
-        Descarga la versión disponible
-        y disfruta de tu música local.
-      </p>
+          <article class="feature">
+            <span class="feature-number">03 / ORGANIZACIÓN</span>
+            <h3>Tu biblioteca organizada</h3>
+            <p>
+              Administra tus canciones y listas desde una
+              experiencia centralizada.
+            </p>
+          </article>
 
-      <a class="button primary"
-         href="https://github.com/GabryYR/Dani-Musica-Local/releases/latest">
-        Descargar para Android
+          <article class="feature">
+            <span class="feature-number">04 / ASISTENTE</span>
+            <h3>Asistente Dani</h3>
+            <p>
+              Accede a las herramientas del asistente integrado
+              en la aplicación.
+            </p>
+          </article>
+
+          <article class="feature">
+            <span class="feature-number">05 / REPRODUCCIÓN</span>
+            <h3>Más formas de disfrutar</h3>
+            <p>
+              Consulta las opciones de reproducción de audio y vídeo
+              incluidas en el proyecto.
+            </p>
+          </article>
+
+          <article class="feature">
+            <span class="feature-number">06 / EXPERIENCIA</span>
+            <h3>Diseñada para Android</h3>
+            <p>
+              Una aplicación creada para ofrecer una experiencia
+              cómoda desde tu dispositivo.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="capturas">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Conoce la interfaz</h2>
+          <p>
+            Una vista previa de Dani Music.
+          </p>
+        </div>
+
+        <div class="screenshots">
+          <div class="screenshot">
+            <img src="reproductor.png" alt="Reproductor de Dani Music">
+            <p>Reproductor</p>
+          </div>
+
+          <div class="screenshot">
+            <img src="ajustes.png" alt="Ajustes de Dani Music">
+            <p>Personalización</p>
+          </div>
+
+          <div class="screenshot">
+            <img src="listas.png" alt="Listas de Dani Music">
+            <p>Listas musicales</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="descargar">
+      <div class="container">
+        <div class="download">
+          <h2>Empieza con Dani Music</h2>
+          <p>
+            Consulta la última versión disponible y descarga
+            la aplicación desde sus publicaciones oficiales.
+          </p>
+
+          <div class="actions">
+            <a class="button button-primary"
+               href="https://github.com/GabryYR/Dani-Musica-Local/releases/latest">
+              Ver última versión
+            </a>
+
+            <a class="button button-secondary"
+               href="https://github.com/GabryYR/Dani-Musica-Local">
+              Código fuente
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <span>© 2026 Dani Music. Proyecto independiente.</span>
+      <a href="https://github.com/GabryYR/Dani-Musica-Local">
+        GitHub
       </a>
     </div>
-  </div>
-</section>
+  </footer>
 
-  </main>  <footer class="footer">
-    <div class="container">
-      <p>Dani — Música Local</p>
-      <p>Desarrollado por GabryYR</p>
-      <p>© 2026 GabryYR. Todos los derechos reservados.</p>
-      <p>
-        <a href="https://github.com/GabryYR/Dani-Musica-Local">
-          GitHub
-        </a>
-      </p>
-    </div>
-  </footer></body>
+</body>
 </html>
