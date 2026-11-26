@@ -19,16 +19,16 @@ Un proyecto creado para ofrecer una experiencia sencilla y cómoda al escuchar t
 🎧 Reproductor
 
 <p align="center">
-  <img src="screenshots/reproductor.png" alt="Pantalla del reproductor" width="250">
+  <img src="reproductor.png" alt="Pantalla del reproductor" width="250">
 </p>⚙️ Ajustes
 
 <p align="center">
-  <img src="screenshots/ajustes.png" alt="Pantalla de ajustes" width="250">
+  <img src="ajustes.png" alt="Pantalla de ajustes" width="250">
 </p>🎼 Listas
 
 <p align="center">
-  <img src="screenshots/listas.png" alt="Listas de reproducción" width="250">
-</p>---
+  <img src="listas.png" alt="Listas de reproducción" width="250">
+</p>
 
 📦 Descargar
 
