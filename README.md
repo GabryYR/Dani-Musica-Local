@@ -1,67 +1,55 @@
+🎵 Dani – Música Local
+
 <p align="center">
-  <img src="logo-dani.png" width="180" alt="Dani Logo">
-</p><h1 align="center">Dani – Música Local</h1><p align="center">
-  <strong>Tu música. Tu espacio. Sin límites.</strong>
-</p><p align="center">
-  Reproductor de música local para Android.
+  <img src="logo-dani.png" alt="Logo de Dani" width="180">
+</p><h3 align="center">Tu música. Tu espacio. Sin límites.</h3><p align="center">
+  Un reproductor de música local para Android.
 </p>---
 
-🎵 Sobre Dani
+📱 Sobre el proyecto
 
-Dani es un proyecto de reproductor de música local para Android, desarrollado por GabryYR.
+Dani – Música Local es una aplicación Android enfocada en reproducir música almacenada en el dispositivo.
 
-Su objetivo es ofrecer una experiencia musical sencilla, cómoda y accesible.
+Este proyecto busca ofrecer una experiencia sencilla para disfrutar de tu música local.
 
-📱 Características
+📦 Descargar
 
-- Reproducción de música local.
-- Proyecto diseñado para Android.
-- Distribución mediante APK.
-- Desarrollo independiente.
+<p align="center">
+  <a href="https://github.com/GabryYR/Dani-Musica-Local/raw/refs/heads/main/Dani-musica-local.apk">
+    **⬇️ Descargar Dani – Música Local (APK)**
+  </a>
+</p>También puedes encontrar el archivo APK en los archivos de este repositorio.
 
-📥 Descargar Dani
+🛠️ Información del proyecto
 
-Última versión disponible:
+- Nombre: Dani – Música Local
+- Plataforma: Android
+- Tipo: Reproductor de música local
+- Formato de distribución: APK
+- Desarrollador: GabryYR
 
-"⬇️ Descargar Dani-musica-local.apk" (Dani-musica-local.apk)
-
-"Consultar todas las versiones" (https://github.com/GabryYR/Dani-Musica-Local/releases)
-
-🛠️ Información técnica
-
-Información| Detalles
-Nombre| Dani
-Plataforma| Android
-Categoría| Música
-Tipo| Reproductor local
-Desarrollador| GabryYR
-Repositorio| GitHub
-
-📸 Capturas de pantalla
-
-Próximamente.
-
-🚀 Instalación
+📲 Instalación
 
 1. Descarga el archivo APK.
-2. Abre el archivo en tu dispositivo Android.
-3. Permite la instalación si el sistema lo solicita.
-4. Instala y disfruta de Dani.
+2. Abre el archivo desde tu dispositivo Android.
+3. Si Android lo solicita, autoriza la instalación desde esa fuente.
+4. Pulsa Instalar.
+5. Abre Dani y disfruta de tu música.
 
-📩 Soporte
+📁 Repositorio
 
-¿Encontraste algún error o tienes una sugerencia?
+Puedes consultar los archivos y el desarrollo del proyecto aquí:
 
-Puedes comunicarte mediante la sección de problemas:
+"GitHub – GabryYR/Dani-Musica-Local" (https://github.com/GabryYR/Dani-Musica-Local)
 
-"Reportar un problema" (https://github.com/GabryYR/Dani-Musica-Local/issues)
+👨‍💻 Desarrollador
+
+GabryYR
+
+Proyecto desarrollado con dedicación para Android.
 
 ---
 
 <p align="center">
-  <strong>DANI</strong>
-  <br>
-  Música Local · Android
-  <br><br>
-  Desarrollado con 🖤 por GabryYR
+  © 2026 GabryYR · Dani – Música Local
 </p>
