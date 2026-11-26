@@ -1,98 +1,168 @@
-🎵 Dani – Música Local
+Dani Music
 
 <p align="center">
-  <img src="logo-dani.png" alt="Logo de Dani" width="180">
-</p><h3 align="center">Tu música. Tu espacio. Sin límites.</h3><p align="center">
-  Reproductor de música local para Android.
+  <img src="logo-dani.png" alt="Dani Music" width="150">
+</p><h3 align="center">A local music experience for Android.</h3><p align="center">
+  Reproducción local, personalización y herramientas integradas en una sola aplicación.
+</p><p align="center">
+  <a href="https://github.com/GabryYR/Dani-Musica-Local/releases/latest">Descargar</a>
+  ·
+  <a href="https://gabryyr.github.io/Dani-Musica-Local/">Sitio oficial</a>
+  ·
+  <a href="https://github.com/GabryYR/Dani-Musica-Local/issues">Reportar un problema</a>
 </p>---
 
-📱 Sobre el proyecto
+Descripción
 
-Dani – Música Local es una aplicación Android enfocada en reproducir música almacenada directamente en tu dispositivo.
+Dani Music es una aplicación Android enfocada en la reproducción de contenido multimedia local.
 
-Un proyecto creado para ofrecer una experiencia sencilla y cómoda al escuchar tu música local.
+El proyecto combina un reproductor de música, reproducción de vídeo, herramientas de organización, personalización visual y un asistente integrado.
 
----
+Su objetivo es ofrecer una experiencia multimedia cómoda, personalizable y centrada en el contenido del dispositivo.
 
-📸 Capturas de pantalla
+Características
 
-🎧 Reproductor
+Reproducción multimedia
 
-<p align="center">
-  <img src="reproductor.png" alt="Pantalla del reproductor" width="250">
-</p>⚙️ Ajustes
+- Reproducción de archivos de audio locales.
+- Reproducción de vídeos.
+- Controles de reproducción.
+- Servicio de reproducción en segundo plano.
+- Controles multimedia mediante notificaciones.
+- Compatibilidad con imagen en imagen para vídeo.
 
-<p align="center">
-  <img src="ajustes.png" alt="Pantalla de ajustes" width="250">
-</p>🎼 Listas
+Biblioteca y organización
 
-<p align="center">
-  <img src="listas.png" alt="Listas de reproducción" width="250">
-</p>
+- Interfaz de biblioteca multimedia.
+- Listas y cola de reproducción.
+- Gestión de favoritos.
+- Acceso a contenido multimedia del dispositivo.
 
-📦 Descargar
+Asistente Dani
 
-<p align="center">
-  <a href="https://github.com/GabryYR/Dani-Musica-Local/raw/refs/heads/main/Dani-musica-local.apk">
-    ⬇️ <strong>DESCARGAR DANI – MÚSICA LOCAL</strong>
-  </a>
-</p>Descarga el APK directamente desde este repositorio.
+- Asistente integrado en la aplicación.
+- Panel y menú propios.
+- Burbuja flotante.
+- Servicio para mantener la burbuja disponible.
 
----
+Letras y conectividad
 
-📲 Instalación
+- Herramientas para consultar letras.
+- Búsqueda online opcional de letras.
+- Conexión a Internet utilizada para las funciones que la necesitan.
 
-1. Descarga el archivo APK.
-2. Abre el archivo desde tu dispositivo Android.
-3. Si aparece una advertencia, permite la instalación desde esa fuente.
-4. Pulsa Instalar.
-5. Abre la aplicación.
+Personalización
 
----
+- Administración de temas.
+- Colores de acento personalizables.
+- Efectos visuales.
+- Interfaz adaptable al rendimiento del dispositivo.
+- Funciones visuales Aurora y Premium.
 
-🛠️ Información del proyecto
+Capturas de pantalla
 
-Detalle| Información
-Nombre| Dani – Música Local
+Reproductor
+
+<img src="reproductor.png" alt="Reproductor de Dani Music" width="260">Ajustes
+
+<img src="ajustes.png" alt="Configuración de Dani Music" width="260">Listas
+
+<img src="listas.png" alt="Listas de Dani Music" width="260">Información técnica
+
+Propiedad| Valor
+Nombre| Dani Music
 Plataforma| Android
-Categoría| Música
-Tipo| Reproductor local
-Formato| APK
-Desarrollador| GabryYR
+Lenguaje| Kotlin
+Interfaz| Jetpack Compose
+Namespace| com.dani.music
+Compile SDK| 36
+Target SDK| 36
+Minimum SDK| 23
+Version Code| 1
+Version Name| 1.0
+Distribución| APK
 
----
+Tecnologías
 
-📁 Estructura del repositorio
+- Kotlin
+- Android SDK
+- Jetpack Compose
+- Material 3
+- AndroidX Activity Compose
+- Android Media APIs
+
+Requisitos
+
+- Dispositivo Android compatible.
+- Android 6.0 o superior.
+- Espacio de almacenamiento disponible.
+- Permisos multimedia para acceder a los archivos del dispositivo.
+
+Algunas funciones requieren permisos adicionales, como notificaciones, visualización sobre otras aplicaciones o acceso a Internet.
+
+Instalación
+
+1. Abre la sección de Releases.
+2. Descarga el APK disponible.
+3. Abre el archivo descargado.
+4. Autoriza la instalación desde esa fuente si Android lo solicita.
+5. Completa la instalación.
+
+Descargas
+
+Última versión disponible:
+
+"Descargar Dani Music desde GitHub Releases" (https://github.com/GabryYR/Dani-Musica-Local/releases/latest)
+
+Estructura del proyecto
 
 Dani-Musica-Local/
-│
-├── screenshots/
-│   ├── reproductor.png
-│   ├── ajustes.png
-│   └── listas.png
-│
+├── app/
+│   └── src/
+│       └── main/
+│           ├── kotlin/com/dani/music/
+│           │   ├── Assistant.kt
+│           │   ├── AssistantDrawer.kt
+│           │   ├── AssistantPanel.kt
+│           │   ├── AssistantRunner.kt
+│           │   ├── Aurora.kt
+│           │   ├── Bubble.kt
+│           │   ├── Core.kt
+│           │   ├── Lyrics.kt
+│           │   ├── MainActivity.kt
+│           │   ├── MusicService.kt
+│           │   ├── PlayerUi.kt
+│           │   ├── Premium.kt
+│           │   ├── SettingsSheet.kt
+│           │   ├── ThemeManager.kt
+│           │   └── VideoActivity.kt
+│           ├── res/
+│           └── AndroidManifest.xml
+├── README.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── index.html
 ├── logo-dani.png
-├── Dani-musica-local.apk
-└── README.md
+├── reproductor.png
+├── ajustes.png
+└── listas.png
 
----
+Desarrollo
 
-👨‍💻 Desarrollador
+El proyecto se encuentra en desarrollo. Las características pueden evolucionar entre versiones.
+
+Para informar de errores o sugerir mejoras, utiliza la sección Issues del repositorio.
+
+Desarrollador
 
 GabryYR
 
-Desarrollado con dedicación para Android.
-
----
-
-📄 Licencia
-
-Consulta la información de licencia del repositorio antes de reutilizar o distribuir este proyecto.
+Proyecto Dani Music para Android.
 
 ---
 
 <p align="center">
-  <strong>🎵 Dani – Música Local</strong>
+  Dani Music
   <br>
-  © 2026 GabryYR
+  Developed by GabryYR
 </p>
