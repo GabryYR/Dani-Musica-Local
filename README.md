@@ -12,6 +12,14 @@ Dani – Música Local es una aplicación Android enfocada en reproducir música
 
 Este proyecto busca ofrecer una experiencia sencilla para disfrutar de tu música local.
 
+## 📸 Capturas de pantalla
+
+<p align="center">
+  <img src="screenshots/reproductor.png" width="250">
+  <img src="screenshots/ajustes.png" width="250">
+  <img src="screenshots/listas.png" width="250">
+</p>
+
 📦 Descargar
 
 <p align="center">
