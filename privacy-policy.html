@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#09090d">
-  <meta name="description" content="Política de privacidad de Dani Music.">
+  <meta name="description" content="Política de privacidad de Dani Music, el reproductor de música local para Android.">
   <title>Política de privacidad | Dani Music</title>
 
   <style>
@@ -17,7 +17,7 @@
     body {
       background: #09090d;
       color: #f5f5f7;
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       line-height: 1.8;
       padding: 40px 18px;
     }
@@ -37,10 +37,22 @@
     header h1 {
       font-size: 32px;
       color: #a78bfa;
+      letter-spacing: -0.02em;
     }
 
-    header p, .muted {
+    header p,
+    .muted {
       color: #9999a8;
+    }
+
+    header .subtitle {
+      margin-top: 6px;
+      font-size: 17px;
+    }
+
+    header .date {
+      margin-top: 4px;
+      font-size: 14px;
     }
 
     section {
@@ -53,7 +65,8 @@
       margin-bottom: 10px;
     }
 
-    p, li {
+    p,
+    li {
       color: #d0d0da;
       font-size: 15px;
     }
@@ -63,9 +76,18 @@
       margin-top: 10px;
     }
 
+    li + li {
+      margin-top: 4px;
+    }
+
     a {
       color: #a78bfa;
       overflow-wrap: anywhere;
+    }
+
+    strong {
+      color: #e8e8f0;
+      font-weight: 600;
     }
 
     footer {
@@ -75,6 +97,7 @@
       text-align: center;
       color: #9999a8;
       font-size: 13px;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -84,117 +107,188 @@
 
   <header>
     <h1>Dani Music</h1>
-    <p>Política de privacidad</p>
-    <p>Última actualización: 26 de noviembre de 2026</p>
+    <p class="subtitle">Política de privacidad</p>
+    <p class="date">Última actualización: 26 de noviembre de 2026</p>
   </header>
 
   <section>
     <h2>1. Introducción</h2>
     <p>
-      Esta política de privacidad explica cómo Dani Music puede
-      procesar información durante el uso de sus funciones.
-      Nuestro objetivo es proporcionar transparencia sobre
-      el tratamiento de datos relacionado con la aplicación.
+      Dani Music es un reproductor de música y vídeo local para Android.
+      Está pensado para que uses la biblioteca de tu propio teléfono,
+      con un asistente que funciona sin conexión a Internet.
+    </p>
+    <p>
+      Esta política describe qué información puede procesarse al usar
+      la aplicación, con el objetivo de ser claros y transparentes.
     </p>
   </section>
 
   <section>
-    <h2>2. Información relacionada con el uso</h2>
+    <h2>2. Principio general: todo en tu dispositivo</h2>
     <p>
-      Dani Music incluye funciones de análisis de uso.
-      Dependiendo de la implementación y del proveedor utilizado,
-      estas herramientas pueden procesar información técnica
-      y de interacción con la aplicación, como:
+      Por defecto, Dani Music no crea cuentas, no sube tu música a un
+      servidor y no envía tu biblioteca a ningún servicio externo.
+      La reproducción, las listas, los favoritos, el historial de
+      reproducción, la posición de cada canción o vídeo, el nombre
+      que le digas al asistente y el resto de ajustes se guardan
+      <strong>solo en el teléfono</strong>, mediante el almacenamiento
+      local de la aplicación.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Permisos y datos del dispositivo</h2>
+    <p>
+      Para funcionar, la app puede solicitar o usar los siguientes
+      permisos, según la versión de Android y las funciones que actives:
     </p>
     <ul>
-      <li>Eventos de uso y funcionamiento de la aplicación.</li>
-      <li>Información técnica del dispositivo.</li>
-      <li>Datos de diagnóstico y errores, si están habilitados.</li>
-      <li>Identificadores técnicos utilizados por el servicio de análisis, si corresponde.</li>
+      <li>
+        <strong>Lectura de audio y vídeo</strong>
+        (READ_MEDIA_AUDIO, READ_MEDIA_VIDEO o, en versiones antiguas,
+        almacenamiento): para listar y reproducir la música y los
+        vídeos que ya están en tu dispositivo.
+      </li>
+      <li>
+        <strong>Internet</strong>: únicamente si activas la búsqueda
+        de letras en Ajustes. Sin esa opción, la app no necesita red
+        para reproducir ni para el asistente.
+      </li>
+      <li>
+        <strong>Servicio en primer plano y notificaciones</strong>:
+        para seguir reproduciendo en segundo plano y mostrar los
+        controles de reproducción.
+      </li>
+      <li>
+        <strong>Mostrar sobre otras apps</strong>
+        (SYSTEM_ALERT_WINDOW): solo si activas la burbuja flotante
+        del asistente.
+      </li>
+      <li>
+        <strong>Ignorar optimizaciones de batería</strong> (opcional):
+        para reducir que el sistema detenga la reproducción cuando
+        la pantalla está apagada.
+      </li>
     </ul>
     <p>
-      Los datos concretos dependen del servicio de análisis
-      integrado y de su configuración.
+      La app lee metadatos locales de tus archivos (título, artista,
+      duración, portada, etc.) para mostrar la biblioteca y el
+      reproductor. Esa información no se envía a ningún servidor
+      por el solo hecho de reproducir o organizar tu música.
     </p>
   </section>
 
   <section>
-    <h2>3. Búsqueda de letras</h2>
+    <h2>4. Asistente local (Dani)</h2>
     <p>
-      Dani Music puede ofrecer una función para buscar letras
-      de canciones mediante Internet.
+      El asistente de Dani Music es un sistema de reglas que funciona
+      <strong>sin Internet y sin modelos en la nube</strong>. Interpreta
+      frases en español en el propio dispositivo y controla el
+      reproductor (reproducir, pausar, cola, favoritos, temporizador, etc.).
     </p>
     <p>
-      Al utilizar esta función, la consulta realizada puede
-      enviarse al servicio externo que proporciona los resultados.
-      Dicho servicio puede aplicar sus propias políticas
-      de privacidad y tratamiento de información.
-    </p>
-  </section>
-
-  <section>
-    <h2>4. Servicios de terceros</h2>
-    <p>
-      Algunas funciones pueden depender de servicios externos,
-      especialmente la búsqueda de letras y las herramientas
-      de análisis.
-    </p>
-    <p>
-      Estos proveedores pueden procesar información conforme
-      a sus propias condiciones y políticas de privacidad.
-      Se deben consultar sus políticas para conocer los detalles
-      del tratamiento de datos.
+      El historial de chat del panel o de la burbuja se mantiene en
+      memoria local de la sesión (con un límite de mensajes) y no se
+      transmite a servidores externos. Si le dices tu nombre
+      (“me llamo…”), ese nombre se guarda solo en el almacenamiento
+      local de la app para personalizar las respuestas.
     </p>
   </section>
 
   <section>
-    <h2>5. Uso de la información</h2>
-    <p>La información procesada puede utilizarse para:</p>
+    <h2>5. Búsqueda de letras (opcional)</h2>
+    <p>
+      Dani Music puede mostrar letras sincronizadas de dos formas:
+    </p>
     <ul>
-      <li>Analizar el funcionamiento de la aplicación.</li>
-      <li>Detectar errores y mejorar la estabilidad.</li>
-      <li>Proporcionar resultados de búsqueda de letras.</li>
-      <li>Mejorar la experiencia de uso.</li>
+      <li>
+        Archivos <strong>.lrc</strong> locales junto a la canción,
+        o importados por ti: todo permanece en el dispositivo.
+      </li>
+      <li>
+        Búsqueda en Internet, <strong>solo si la activas en Ajustes</strong>.
+        En ese caso, se envían el título y, si está disponible, el
+        artista de la canción al servicio público
+        <a href="https://lrclib.net" rel="noopener noreferrer">lrclib.net</a>
+        para intentar obtener la letra. El resultado se guarda en
+        caché local para no repetir la consulta.
+      </li>
+    </ul>
+    <p>
+      Ese servicio externo aplica su propia política de privacidad.
+      Si no quieres que se envíe ninguna consulta de letras, deja
+      la opción desactivada en Ajustes: la reproducción y el asistente
+      siguen funcionando sin red.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Burbuja flotante</h2>
+    <p>
+      Si activas la burbuja flotante, la app usa el permiso de dibujar
+      sobre otras aplicaciones y un servicio en primer plano con una
+      notificación, para que puedas hablar con el asistente sin abrir
+      la pantalla principal. La posición de la burbuja se guarda de
+      forma local. No se transmite contenido de otras apps ni se
+      intercambia con servidores por el hecho de usar la burbuja.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Qué no hacemos</h2>
+    <p>Con la información disponible en el diseño actual de la app:</p>
+    <ul>
+      <li>No se requiere cuenta de usuario ni inicio de sesión.</li>
+      <li>No se sube tu biblioteca de música ni tus listas a la nube.</li>
+      <li>No se integra publicidad de terceros.</li>
+      <li>No se utilizan herramientas de análisis o telemetría de uso
+          (tipo Firebase Analytics u equivalentes) en el código de la app.</li>
+      <li>El asistente no envía tus mensajes a servicios de inteligencia
+          artificial externos.</li>
     </ul>
   </section>
 
   <section>
-    <h2>6. Seguridad</h2>
+    <h2>8. Seguridad</h2>
     <p>
-      Se procura proteger la información mediante medidas
-      técnicas y organizativas apropiadas. Sin embargo,
-      ningún sistema de transmisión o almacenamiento puede
-      garantizar seguridad absoluta.
+      Los datos de la aplicación se almacenan en el espacio privado
+      que Android asigna a Dani Music. Se procura un uso razonable de
+      permisos y de red. Aun así, ningún sistema es absolutamente
+      invulnerable: la seguridad también depende del estado del
+      dispositivo, de las actualizaciones del sistema y de no
+      instalar software de fuentes no confiables.
     </p>
   </section>
 
   <section>
-    <h2>7. Privacidad de menores</h2>
+    <h2>9. Privacidad de menores</h2>
     <p>
-      Dani Music no está diseñada para solicitar directamente
-      información personal de menores. Si se identifica que
-      se ha recopilado información personal de manera indebida,
-      se deberán tomar medidas para atender la situación.
+      Dani Music no está diseñada para solicitar de forma deliberada
+      datos personales de menores. Al ser un reproductor local sin
+      cuentas, el tratamiento habitual se limita a archivos y
+      preferencias del propio dispositivo. Si un tutor legal considera
+      que se ha producido un uso indebido relacionado con un menor,
+      puede contactar al desarrollador para valorarlo.
     </p>
   </section>
 
   <section>
-    <h2>8. Cambios en esta política</h2>
+    <h2>10. Cambios en esta política</h2>
     <p>
-      Esta política puede actualizarse cuando se incorporen
-      nuevas funciones, servicios o cambios en el tratamiento
-      de información.
-    </p>
-      <p>
-      Las modificaciones se publicarán en esta misma página.
+      Esta política puede actualizarse si cambian las funciones de
+      la app (por ejemplo, nuevos servicios en red o nuevas formas
+      de almacenamiento). La versión vigente se publicará en esta
+      misma página, con la fecha de última actualización.
     </p>
   </section>
 
   <section>
-    <h2>9. Contacto</h2>
+    <h2>11. Contacto</h2>
     <p>
-      Para consultas relacionadas con esta política de privacidad,
-      puedes contactar al desarrollador:
+      Para consultas relacionadas con esta política de privacidad
+      o con el tratamiento de datos en Dani Music, puedes contactar
+      al desarrollador:
     </p>
     <p>
       Correo electrónico:
@@ -204,7 +298,7 @@
 
   <footer>
     Dani Music · Política de privacidad<br>
-    Proyecto independiente para Android.
+    Proyecto independiente para Android · Reproductor local
   </footer>
 
 </main>
