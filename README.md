@@ -1,168 +1,126 @@
 Dani Music
 
 <p align="center">
-  <img src="logo-dani.png" alt="Dani Music" width="150">
-</p><h3 align="center">A local music experience for Android.</h3><p align="center">
-  Reproducción local, personalización y herramientas integradas en una sola aplicación.
+  <img src="logo-dani.png" width="110" alt="Dani Music Logo">
+</p><h3 align="center">Tu música. Tu manera.</h3><p align="center">
+  Reproductor multimedia para Android con una experiencia moderna,
+  herramientas de personalización y funciones diseñadas para disfrutar
+  y organizar tu contenido.
 </p><p align="center">
   <a href="https://github.com/GabryYR/Dani-Musica-Local/releases/latest">Descargar</a>
   ·
-  <a href="https://gabryyr.github.io/Dani-Musica-Local/">Sitio oficial</a>
+  <a href="https://gabryyr.github.io/Dani-Musica-Local/">Sitio web</a>
   ·
   <a href="https://github.com/GabryYR/Dani-Musica-Local/issues">Reportar un problema</a>
 </p>---
 
 Descripción
 
-Dani Music es una aplicación Android enfocada en la reproducción de contenido multimedia local.
+Dani Music es un proyecto de aplicación Android enfocado en ofrecer una experiencia multimedia personalizable y sencilla de utilizar.
 
-El proyecto combina un reproductor de música, reproducción de vídeo, herramientas de organización, personalización visual y un asistente integrado.
-
-Su objetivo es ofrecer una experiencia multimedia cómoda, personalizable y centrada en el contenido del dispositivo.
+El proyecto reúne herramientas de reproducción, organización y personalización en una misma aplicación, con una interfaz pensada para dispositivos Android.
 
 Características
 
-Reproducción multimedia
+- Reproductor de música: reproducción de contenido de audio local.
+- Reproducción de vídeo: funciones multimedia integradas.
+- Reproducción en segundo plano: servicio para mantener la reproducción.
+- Biblioteca musical: organización de canciones y listas.
+- Favoritos: acceso a contenido seleccionado.
+- Asistente Dani: herramientas de asistencia integradas.
+- Personalización: opciones para modificar la apariencia.
+- Letras: herramientas relacionadas con la visualización de letras.
+- Ventana flotante: acceso a funciones mediante una interfaz flotante.
+- Picture-in-Picture: compatibilidad con reproducción de vídeo en ventana, según las funciones disponibles.
 
-- Reproducción de archivos de audio locales.
-- Reproducción de vídeos.
-- Controles de reproducción.
-- Servicio de reproducción en segundo plano.
-- Controles multimedia mediante notificaciones.
-- Compatibilidad con imagen en imagen para vídeo.
-
-Biblioteca y organización
-
-- Interfaz de biblioteca multimedia.
-- Listas y cola de reproducción.
-- Gestión de favoritos.
-- Acceso a contenido multimedia del dispositivo.
-
-Asistente Dani
-
-- Asistente integrado en la aplicación.
-- Panel y menú propios.
-- Burbuja flotante.
-- Servicio para mantener la burbuja disponible.
-
-Letras y conectividad
-
-- Herramientas para consultar letras.
-- Búsqueda online opcional de letras.
-- Conexión a Internet utilizada para las funciones que la necesitan.
-
-Personalización
-
-- Administración de temas.
-- Colores de acento personalizables.
-- Efectos visuales.
-- Interfaz adaptable al rendimiento del dispositivo.
-- Funciones visuales Aurora y Premium.
+Las características pueden variar según la versión instalada.
 
 Capturas de pantalla
 
-Reproductor
+<p align="center">
+  <img src="reproductor.png" width="250" alt="Pantalla del reproductor">
+  <img src="ajustes.png" width="250" alt="Pantalla de ajustes">
+  <img src="listas.png" width="250" alt="Pantalla de listas">
+</p><p align="center">
+  <sub>Reproductor · Ajustes · Listas musicales</sub>
+</p>Descarga
 
-<img src="reproductor.png" alt="Reproductor de Dani Music" width="260">Ajustes
+Puedes consultar las versiones publicadas y descargar la versión más reciente desde GitHub Releases.
 
-<img src="ajustes.png" alt="Configuración de Dani Music" width="260">Listas
+<p align="center">
+  <a href="https://github.com/GabryYR/Dani-Musica-Local/releases/latest">
+    <strong>Descargar la última versión de Dani Music</strong>
+  </a>
+</p>También puedes consultar el historial de versiones en la sección de publicaciones del repositorio.
 
-<img src="listas.png" alt="Listas de Dani Music" width="260">Información técnica
+Información técnica
 
-Propiedad| Valor
+Propiedad| Información
 Nombre| Dani Music
 Plataforma| Android
-Lenguaje| Kotlin
+Lenguaje principal| Kotlin
 Interfaz| Jetpack Compose
-Namespace| com.dani.music
-Compile SDK| 36
-Target SDK| 36
-Minimum SDK| 23
-Version Code| 1
-Version Name| 1.0
-Distribución| APK
-
-Tecnologías
-
-- Kotlin
-- Android SDK
-- Jetpack Compose
-- Material 3
-- AndroidX Activity Compose
-- Android Media APIs
-
-Requisitos
-
-- Dispositivo Android compatible.
-- Android 6.0 o superior.
-- Espacio de almacenamiento disponible.
-- Permisos multimedia para acceder a los archivos del dispositivo.
-
-Algunas funciones requieren permisos adicionales, como notificaciones, visualización sobre otras aplicaciones o acceso a Internet.
-
-Instalación
-
-1. Abre la sección de Releases.
-2. Descarga el APK disponible.
-3. Abre el archivo descargado.
-4. Autoriza la instalación desde esa fuente si Android lo solicita.
-5. Completa la instalación.
-
-Descargas
-
-Última versión disponible:
-
-"Descargar Dani Music desde GitHub Releases" (https://github.com/GabryYR/Dani-Musica-Local/releases/latest)
+Diseño visual| Material 3
+SDK mínimo| Android API 23
+SDK objetivo| Android API 36
+Versión inicial| 1.0.0
+Identificador| "com.dani.music"
 
 Estructura del proyecto
 
-Dani-Musica-Local/
-├── app/
-│   └── src/
-│       └── main/
-│           ├── kotlin/com/dani/music/
-│           │   ├── Assistant.kt
-│           │   ├── AssistantDrawer.kt
-│           │   ├── AssistantPanel.kt
-│           │   ├── AssistantRunner.kt
-│           │   ├── Aurora.kt
-│           │   ├── Bubble.kt
-│           │   ├── Core.kt
-│           │   ├── Lyrics.kt
-│           │   ├── MainActivity.kt
-│           │   ├── MusicService.kt
-│           │   ├── PlayerUi.kt
-│           │   ├── Premium.kt
-│           │   ├── SettingsSheet.kt
-│           │   ├── ThemeManager.kt
-│           │   └── VideoActivity.kt
-│           ├── res/
-│           └── AndroidManifest.xml
-├── README.md
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── index.html
-├── logo-dani.png
-├── reproductor.png
-├── ajustes.png
-└── listas.png
+El código fuente está organizado en módulos y componentes de la aplicación, incluyendo:
+
+- Actividad principal.
+- Reproductor y controles multimedia.
+- Servicio de reproducción.
+- Administración de temas.
+- Panel del asistente.
+- Configuración y personalización.
+- Componentes de vídeo y letras.
+
+La estructura exacta puede cambiar conforme evolucione el desarrollo.
 
 Desarrollo
 
-El proyecto se encuentra en desarrollo. Las características pueden evolucionar entre versiones.
+Para trabajar con el código fuente:
 
-Para informar de errores o sugerir mejoras, utiliza la sección Issues del repositorio.
+1. Descarga o clona este repositorio.
+2. Abre el proyecto en un entorno compatible con Android y Gradle.
+3. Espera a que se complete la sincronización.
+4. Configura el entorno de compilación.
+5. Ejecuta la aplicación o genera una compilación de prueba.
 
-Desarrollador
+Reportar problemas
 
-GabryYR
+Si encuentras un error o tienes alguna sugerencia, puedes abrir un reporte en la sección de incidencias del repositorio.
 
-Proyecto Dani Music para Android.
+"Crear un reporte en GitHub" (https://github.com/GabryYR/Dani-Musica-Local/issues)
+
+Al reportar un problema, incluye:
+
+- Descripción del error.
+- Pasos para reproducirlo.
+- Versión de la aplicación.
+- Información del dispositivo.
+- Capturas de pantalla, si son necesarias.
+
+Aviso
+
+Dani Music es un proyecto independiente. Los nombres y marcas de terceros mencionados en el proyecto pertenecen a sus respectivos propietarios.
+
+Autor y proyecto
+
+Dani Music
+
+Desarrollado como un proyecto independiente para Android.
+
+- Repositorio: "GabryYR/Dani-Musica-Local" (https://github.com/GabryYR/Dani-Musica-Local)
+- Sitio web: "Dani Music" (https://gabryyr.github.io/Dani-Musica-Local/)
+- Versiones: "GitHub Releases" (https://github.com/GabryYR/Dani-Musica-Local/releases)
 
 ---
 
 <p align="center">
-  Dani Music
-  <br>
-  Developed by GabryYR
+  <strong>Dani Music</strong><br>
+  Una experiencia musical a tu manera.
 </p>
