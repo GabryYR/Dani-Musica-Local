@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#09090d">
-  <meta name="description" content="Dani Music: tu música, tus listas y tu experiencia de reproducción en un solo lugar.">
+  <meta name="description" content="Dani Music: reproductor local para Android. Tu biblioteca, asistente offline en español e inglés, sin cuentas ni nube.">
   <title>Dani Music — Tu música, a tu manera</title>
 
   <style>
@@ -130,7 +130,7 @@
     }
 
     .hero p {
-      max-width: 590px;
+      max-width: 620px;
       margin: 25px auto 32px;
       color: var(--muted);
       font-size: 17px;
@@ -180,7 +180,7 @@
 
     .section-heading {
       text-align: center;
-      max-width: 620px;
+      max-width: 640px;
       margin: 0 auto 45px;
     }
 
@@ -253,6 +253,27 @@
       font-size: 13px;
     }
 
+    .privacy {
+      padding: 40px 28px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+      text-align: center;
+    }
+
+    .privacy h2 {
+      font-size: clamp(24px, 4vw, 32px);
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .privacy p {
+      max-width: 560px;
+      margin: 0 auto 22px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
     .download {
       padding: 65px 25px;
       border: 1px solid rgba(167,139,250,.2);
@@ -274,6 +295,12 @@
       color: var(--muted);
     }
 
+    .meta {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     footer {
       margin-top: 80px;
       padding: 28px 0;
@@ -287,6 +314,17 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 15px;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links a:hover {
+      color: white;
     }
 
     @media (max-width: 750px) {
@@ -315,7 +353,7 @@
     }
 
     @media (max-width: 420px) {
-      .nav-links a:first-child {
+      .nav-links a.nav-hide-sm {
         display: none;
       }
 
@@ -337,8 +375,9 @@
         </a>
 
         <div class="nav-links">
-          <a href="#funciones">Funciones</a>
+          <a class="nav-hide-sm" href="#funciones">Funciones</a>
           <a href="#capturas">Capturas</a>
+          <a href="#privacidad">Privacidad</a>
           <a href="#descargar">Descargar</a>
         </div>
       </nav>
@@ -348,14 +387,14 @@
   <main>
     <section class="hero">
       <div class="container hero-content">
-        <span class="eyebrow">Tu experiencia musical</span>
+        <span class="eyebrow">Local · Sin cuentas · Android</span>
 
         <h1>Tu música.<br><span>Tu manera.</span></h1>
 
         <p>
-          Descubre una experiencia de reproducción diseñada para
-          disfrutar tu música con una interfaz moderna y herramientas
-          que se adaptan a ti.
+          Reproductor multimedia local para Android: tu biblioteca del teléfono,
+          un asistente que funciona <strong style="color:#d0d0da;font-weight:600">sin internet</strong>
+          (español e inglés) y personalización profunda. Sin nube, sin anuncios integrados.
         </p>
 
         <div class="actions">
@@ -375,65 +414,68 @@
     <section class="section" id="funciones">
       <div class="container">
         <div class="section-heading">
-          <h2>Una experiencia completa</h2>
+          <h2>Hecha para tu biblioteca</h2>
           <p>
-            Herramientas pensadas para que tengas el control
-            de tu experiencia musical.
+            Todo vive en tu dispositivo. Escucha, organiza y controla
+            la música con herramientas reales de la app.
           </p>
         </div>
 
         <div class="features">
           <article class="feature">
-            <span class="feature-number">01 / REPRODUCTOR</span>
-            <h3>Tu música en un solo lugar</h3>
+            <span class="feature-number">01 / MÚSICA Y VÍDEO</span>
+            <h3>Reproductor local</h3>
             <p>
-              Disfruta de tu biblioteca musical con una experiencia
-              de reproducción sencilla.
+              Reproduce audio y vídeo del teléfono, en segundo plano,
+              con cola, aleatorio, repetición y velocidad ajustable.
+              El vídeo admite gestos y Picture-in-Picture.
             </p>
           </article>
 
           <article class="feature">
-            <span class="feature-number">02 / PERSONALIZACIÓN</span>
-            <h3>Una interfaz a tu estilo</h3>
+            <span class="feature-number">02 / ASISTENTE</span>
+            <h3>Dani, sin internet</h3>
             <p>
-              Explora las opciones de apariencia y personalización
-              disponibles en la aplicación.
+              Órdenes en español o inglés: “pon mis favoritas”,
+              “what’s playing?”, temporizador, volumen… Todo por reglas
+              en el dispositivo, sin modelos en la nube.
             </p>
           </article>
 
           <article class="feature">
-            <span class="feature-number">03 / ORGANIZACIÓN</span>
-            <h3>Tu biblioteca organizada</h3>
+            <span class="feature-number">03 / BURBUJA</span>
+            <h3>Control flotante</h3>
             <p>
-              Administra tus canciones y listas desde una
-              experiencia centralizada.
+              Activa la burbuja y habla con el asistente sobre otras apps,
+              con el mismo tema e icono de Dani Music.
             </p>
           </article>
 
           <article class="feature">
-            <span class="feature-number">04 / ASISTENTE</span>
-            <h3>Asistente Dani</h3>
+            <span class="feature-number">04 / BIBLIOTECA</span>
+            <h3>Favoritos y listas</h3>
             <p>
-              Accede a las herramientas del asistente integrado
-              en la aplicación.
+              Organiza canciones, favoritos y playlists locales.
+              Orden por título, artista o recientes; filtro de duración mínima.
             </p>
           </article>
 
           <article class="feature">
-            <span class="feature-number">05 / REPRODUCCIÓN</span>
-            <h3>Más formas de disfrutar</h3>
+            <span class="feature-number">05 / LETRAS</span>
+            <h3>LRC y búsqueda opcional</h3>
             <p>
-              Consulta las opciones de reproducción de audio y vídeo
-              incluidas en el proyecto.
+              Letras sincronizadas desde archivos .lrc o importadas.
+              La búsqueda online (lrclib.net) está apagada por defecto
+              y solo se usa si la activas en Ajustes.
             </p>
           </article>
 
           <article class="feature">
-            <span class="feature-number">06 / EXPERIENCIA</span>
-            <h3>Diseñada para Android</h3>
+            <span class="feature-number">06 / ESTILO</span>
+            <h3>A tu medida</h3>
             <p>
-              Una aplicación creada para ofrecer una experiencia
-              cómoda desde tu dispositivo.
+              Temas oscuro, AMOLED y claro; decenas de acentos;
+              fondo personalizado; animaciones según la gama del móvil.
             </p>
           </article>
         </div>
@@ -445,7 +487,7 @@
         <div class="section-heading">
           <h2>Conoce la interfaz</h2>
           <p>
-            Una vista previa de Dani Music.
+            Reproductor, personalización y listas en una experiencia pensada para Android.
           </p>
         </div>
 
@@ -468,13 +510,32 @@
       </div>
     </section>
 
+    <section class="section" id="privacidad">
+      <div class="container">
+        <div class="privacy">
+          <h2>Privacidad primero</h2>
+          <p>
+            Sin cuentas. La biblioteca, los favoritos y el historial se quedan en el teléfono.
+            El asistente no envía mensajes a internet. La única red opcional es la búsqueda de letras,
+            y solo si tú la enciendes.
+          </p>
+          <div class="actions">
+            <a class="button button-secondary"
+               href="privacidad-dani-music.html">
+              Leer política de privacidad
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="descargar">
       <div class="container">
         <div class="download">
-          <h2>Empieza con Dani Music</h2>
+          <h2>Descarga Dani Music 1.0</h2>
           <p>
-            Consulta la última versión disponible y descarga
-            la aplicación desde sus publicaciones oficiales.
+            Android 6.0 o superior. Obtén el APK de la última publicación
+            en GitHub Releases e instálalo en tu dispositivo.
           </p>
 
           <div class="actions">
@@ -488,6 +549,11 @@
               Código fuente
             </a>
           </div>
+
+          <p class="meta">
+            Paquete <code style="color:#c4b5fd">com.dani.music</code>
+            · minSdk 23 · targetSdk 36
+          </p>
         </div>
       </div>
     </section>
@@ -495,10 +561,12 @@
 
   <footer>
     <div class="container footer-content">
-      <span>© 2026 Dani Music. Proyecto independiente.</span>
-      <a href="https://github.com/GabryYR/Dani-Musica-Local">
-        GitHub
-      </a>
+      <span>© 2026 Dani Music. Proyecto independiente para Android.</span>
+      <div class="footer-links">
+        <a href="privacidad-dani-music.html">Privacidad</a>
+        <a href="https://github.com/GabryYR/Dani-Musica-Local/releases/latest">Releases</a>
+        <a href="https://github.com/GabryYR/Dani-Musica-Local">GitHub</a>
+      </div>
     </div>
   </footer>
 
